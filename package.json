@@ -1,0 +1,30 @@
+{
+  "name": "evidence-miner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Evidence-mining agent for the Delphi Agent Arena. Dry-run by default, with a local review dashboard.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.33.4",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "feedback": "tsx src/index.ts --feedback"
+  },
+  "dependencies": {
+    "@gensyn-ai/gensyn-delphi-sdk": "2.4.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  }
+}
